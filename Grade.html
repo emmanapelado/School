@@ -1,0 +1,44 @@
+<html lang="en" dir="ltr">
+    <head>
+        <title>Grade level</title>
+        <link rel="stylesheet" href="bar.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+            <div class="update">
+                <div class="Graph">
+                    <p>GRAPH COURSE</p>
+                </div>
+            </div>
+
+            <div class="chart">
+                <ul class="numbers">
+                    <li><span>100%</span></li>
+                    <li><span>75%</span></li>
+                    <li><span>50%</span></li>
+                </ul>
+                <ul class="bars">
+                    <li><div class="bar" data-percentage="50"></div><span>Tourism</span></li>
+                    <li><div class="bar" data-percentage="65"></div><span>Cullinary</span></li>
+                    <li><div class="bar" data-percentage="70"></div><span>Information Techonology</span></li>
+                    <li><div class="bar" data-percentage="90"></div><span>Education/Teaching</span></li>
+                    <li><div class="bar" data-percentage="80"></div><span>Engineering</span></li>
+                </ul>
+            </div>
+
+            <script type="text/javascript">
+                $(function(){
+                    $('.bars li .bar').each(function(key, bar){
+                        var percentage = $(this).data('percentage');
+                        $(this).animate({
+                            'height' : percentage + '%'
+                        },1000);
+                    });
+                });
+            </script>
+            <div class="row">
+                <div class="col-lg-6 text-center m-auto">
+                    <button class="btn2"><a class="button" href="School.html">Back</a></button>
+        </div>
+    </body>
+</html>
